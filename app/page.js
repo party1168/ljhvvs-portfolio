@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
     {/*用來放所有的Home Page Components*/}
-    <HeroSection></HeroSection>
+    <HeroSection></HeroSection> 
     </>
   );
 }
