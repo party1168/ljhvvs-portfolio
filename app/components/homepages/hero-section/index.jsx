@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
 import { personalData } from "@/utils/data/personal-data";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
@@ -8,7 +7,6 @@ import { MdDownload } from "react-icons/md";
 import { RiContactsFill, RiTwitterXFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
 function HeroSection() {
-    const {t} = useTranslation();
     return (
         <section className="relative justify-center flex flex-col items-center py-2 lg:py-12">
             <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-4">
@@ -17,7 +15,7 @@ function HeroSection() {
                         你好！<br />
                         歡迎來到我的個人網站，<br />
                         我是{' '}
-                        <span className=" text-pink-500">{t{personalData.name}}</span><br />
+                        <span className=" text-pink-500"> {personalData.name}</span><br />
                         {`我是一個 `}
                         <span className=" text-[#16f2b3]">{personalData.designation}</span>
                         。
@@ -57,6 +55,20 @@ function HeroSection() {
                             className="transition-all text-pink-500 hover:scale-125 duration-300"
                         >
                             <RiTwitterXFill size={40} />
+                        </Link>
+                    </div>
+                    <div className="flex items-center gap-3">
+                        <Link href="#contact" className=" rounded-full bg-gradient-to-r to-pink-500 from-[#91827d] p-[1px] transition-all  duration-300 hover:from-[#ff8a8a] hover:to-[#d63e71]">
+                            <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#1d2220] md:text-sm rounded-full border-none text-center font-medium tracking-wider text-white transition-all duration-200 ease-out md:font-semibold flex items-center gap-1 hover:gap-3">
+                                <span>聯絡我</span>
+                                <RiContactsFill />
+                            </button>
+                        </Link>
+                        <Link href="#resume" className="rounded-full bg-gradient-to-r to-teal-400 from-orange-500 p-[1px] transition-all duration-300 hover:from-[#5ec8bd] hover:to-[#ff9248]">
+                            <button className="bg-[#1d2220] px-3 md:px-8 py-3 md:py-4 rounded-full border-none text-center flex items-center font-medium tracking-wide text-white duration-200 ease-out md:font-semibold gap-1 hover:gap-3 text-xs md:text-sm ">
+                                <span>取得履歷</span>
+                                <MdDownload />
+                            </button>
                         </Link>
                     </div>
                 </div>
