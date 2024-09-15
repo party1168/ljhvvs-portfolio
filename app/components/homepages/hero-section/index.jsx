@@ -10,7 +10,7 @@ function HeroSection() {
     return (
         <section className="relative justify-center flex flex-col items-center py-2 lg:py-12">
             <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-4">
-                <div className=" order-1 lg:-order-1 flex flex-col justify-center p-2 pb-5 md:pb-10 lg:pt-10">
+                <div className=" order-1 lg:-order-1 flex flex-col justify-center pl-10 md:pl-0 p-2  pb-5 md:pb-10 lg:pt-10">
                     <h1 className=" text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
                         你好！<br />
                         歡迎來到我的個人網站，<br />
