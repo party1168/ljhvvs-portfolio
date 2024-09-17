@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import { ToastContainer } from "react-toastify";
+import "./css/card.scss"
 import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 

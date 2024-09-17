@@ -16,3 +16,5 @@ const AnimationLottie = ({animationPath,width}) =>{
         <Lottie {...defaultOptions} />
     )
 };
+
+export default AnimationLottie

@@ -23,10 +23,10 @@ function Navbar() {
                     </li>
                     <li>
                         <Link
-                            href="/#experience"
+                            href="/#educations"
                             className="block px-6 py-2 no-underline outline-none hover:no-underline">
                             <div className="text-white transition-colors duration-300 hover:text-pink-400">
-                                Experience
+                                Educations
                             </div>
                         </Link>
                     </li>
