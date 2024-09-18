@@ -6,7 +6,7 @@ function Navbar() {
             <div className="flex justify-between items-start py-8">
                 <div className="px-10 md:px-20 items-center flex flex-shrink-0">
                     <Link
-                        href={"/"}
+                        to="/"
                         className=" text-blue-400 text-3xl font-bold"
                     >
                         Jeremy Lu
