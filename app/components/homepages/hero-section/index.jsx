@@ -8,6 +8,7 @@ import { FaFacebook } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill, RiTwitterXFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import codingme from "@/public/codingme.webp"
 function HeroSection() {
     return (
         <section className="relative justify-center flex flex-col items-center py-2 lg:py-12">
@@ -76,7 +77,7 @@ function HeroSection() {
                 </div>
                 <div className="order-0 lg:order-1 px-10 ">
                     <Image
-                        src="/codingme.webp"  // 使用靜態import方式加載gif圖片
+                        src={codingme}
                         alt="Coding Me"
                         width={500}     // 設定寬度
                         height={500}    // 設定高度
