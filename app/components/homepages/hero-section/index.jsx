@@ -1,5 +1,7 @@
+"use client"
+
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "next-scroll";
 import { personalData } from "@/utils/data/personal-data";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
@@ -21,13 +23,13 @@ function HeroSection() {
                         。
                     </h1>
                     <div className="my-12 flex items-center gap-5">
-                        <Link
+                        <a
                             href={personalData.github}
                             target='_blank'
                             className="transition-all text-pink-500 hover:scale-125 duration-300"
                         >
                             <BsGithub size={40} />
-                        </Link>
+                        </a>
                         {/*                     <Link
                         href={personalData.linkedIn}
                         target='_blank'
@@ -42,34 +44,34 @@ function HeroSection() {
                     >
                         <FaFacebook size={30} />
                     </Link> */}
-                        <Link
+                        <a
                             href={personalData.leetcode}
                             target='_blank'
                             className="transition-all text-pink-500 hover:scale-125 duration-300"
                         >
                             <SiLeetcode size={40} />
-                        </Link>
-                        <Link
+                        </a>
+                        <a
                             href={personalData.twitter}
                             target='_blank'
                             className="transition-all text-pink-500 hover:scale-125 duration-300"
                         >
                             <RiTwitterXFill size={40} />
-                        </Link>
+                        </a>
                     </div>
                     <div className="flex items-center gap-3">
-                        <Link href="#contact" className=" rounded-full bg-gradient-to-r to-pink-500 from-[#91827d] p-[1px] transition-all  duration-300 hover:from-[#ff8a8a] hover:to-[#d63e71]">
+                        <Link to="contact" className=" rounded-full bg-gradient-to-r to-pink-500 from-[#91827d] p-[1px] transition-all  duration-300 hover:from-[#ff8a8a] hover:to-[#d63e71]">
                             <button className="px-3 text-xs md:px-8 py-3 md:py-4 bg-[#1d2220] md:text-sm rounded-full border-none text-center font-medium tracking-wider text-white transition-all duration-200 ease-out md:font-semibold flex items-center gap-1 hover:gap-3">
                                 <span>聯絡我</span>
                                 <RiContactsFill />
                             </button>
                         </Link>
-                        <Link href="#resume" className="rounded-full bg-gradient-to-r to-teal-400 from-orange-500 p-[1px] transition-all duration-300 hover:from-[#5ec8bd] hover:to-[#ff9248]">
+                        <a href="https://drive.google.com/file/d/1vH8QwcahnSq8MVSmLjq1KArelytRicUT/view?usp=drive_link" className="rounded-full bg-gradient-to-r to-teal-400 from-orange-500 p-[1px] transition-all duration-300 hover:from-[#5ec8bd] hover:to-[#ff9248]">
                             <button className="bg-[#1d2220] px-3 md:px-8 py-3 md:py-4 rounded-full border-none text-center flex items-center font-medium tracking-wide text-white duration-200 ease-out md:font-semibold gap-1 hover:gap-3 text-xs md:text-sm ">
                                 <span>取得履歷</span>
                                 <MdDownload />
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
                 <div className="order-0 lg:order-1 px-10 ">

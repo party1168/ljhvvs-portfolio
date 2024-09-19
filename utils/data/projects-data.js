@@ -6,7 +6,7 @@ export const projectsData = [
         isBlog:false,
         title:"Recipes Web Crawler",
         description:"用以爬取英文食譜，並將食材原物料用以訓練模型。",
-        ghLink:"https://github.com/soumyajit4419/Chatifyhttps://github.com/party1168/Food-Crawler"
+        ghLink:"https://github.com/party1168/Food-Crawler"
     },
     {
         id:2,
@@ -14,7 +14,7 @@ export const projectsData = [
         isBlog:false,
         title:"Recipes Web Crawler",
         description:"用以爬取英文食譜，並將食材原物料用以訓練模型。",
-        ghLink:"https://github.com/soumyajit4419/Chatifyhttps://github.com/party1168/Food-Crawler"
+        ghLink:"https://github.com/party1168/Food-Crawler"
     },
     {
         id:3,
@@ -22,6 +22,6 @@ export const projectsData = [
         isBlog:false,
         title:"Recipes Web Crawler",
         description:"用以爬取英文食譜，並將食材原物料用以訓練模型。",
-        ghLink:"https://github.com/soumyajit4419/Chatifyhttps://github.com/party1168/Food-Crawler"
+        ghLink:"https://github.com/party1168/Food-Crawler"
     }
 ]
