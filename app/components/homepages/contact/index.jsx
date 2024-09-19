@@ -8,7 +8,7 @@ import { MdAlternateEmail } from "react-icons/md";
 import ContactWithCaptcha from "./contact-with-recaptcha";
 function Contact() {
     return (
-        <div id="educations" className="relative z-50 border-t my-6 lg:my-12 border-[#353951]">
+        <div id="contact" className="relative z-50 border-t my-6 lg:my-12 border-[#353951]">
             <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
 
             <div className="flex justify-center -z-40">
