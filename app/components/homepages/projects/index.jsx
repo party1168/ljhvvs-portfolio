@@ -1,39 +1,43 @@
-import ProjectCards from "./projectCards";
-import { projectsData } from "@/utils/data/projects-data";
+"use client"
+import { useContent, useLang } from "../../lang-provider";
+import SectionTitle from "../../section-title";
+
 function Projects() {
+    const t = useContent().projects;
+    const { lang } = useLang();
     return (
         <div id="projects" className="relative z-50 border-t my-6 lg:my-12 border-[#353951]">
-            <div className="w-[100px] h-[100px] bg-violet-100 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl  opacity-20"></div>
-
-            <div className="flex justify-center -z-40">
-                <div className=" absolute top-0 h-[1px] w-1/2 bg-gradient-to-r from-transparent via-[#8B8FA3] to-transparent"></div>
-            </div>
-            <div className="flex justify-center my-5 lg:py-8">
-                <div className="flex  items-center">
-                    <span className="w-24 h-[2px] bg-[#3D4B59]"></span>
-                    <span className="from-[#3D4B59] bg-[#2D3142] to-[#3D4B59] bg-gradient-to-r w-fit text-white p-2 px-5 text-xl rounded-md">
-                        Projects
-                    </span>
-                    <span className="w-24 h-[2px] bg-[#3D4B59]"></span>
-                </div>
-            </div>
-            <div className="w-full my-0 lg:my-3">
-                <div className="grid grid-cols-1 lg:grid-cols-3 bg-">
-                    {projectsData.slice(0, 3).map((project) => (
-                        <div key={project.id} className="flex items-center justify-center">
-                            <ProjectCards
-                                imgPath={project.imgPath}
-                                isBlog={project.isBlog}
-                                title={project.title}
-                                description={project.description}
-                                ghLink={project.ghLink}
-                            />
+            <SectionTitle>{t.title}</SectionTitle>
+            <div className="flex flex-col gap-8 py-4">
+                {t.items.map((p, idx) => (
+                    <div key={p.name}
+                        className={`rounded-lg border p-5 lg:p-8 ${idx === 0 ? "border-[#16f2b3]/60 bg-[#282c44]" : "border-[#464c6a] bg-[#282c44]/60"}`}>
+                        {idx === 0 && (
+                            <span className="mb-3 inline-block rounded-full bg-[#16f2b3]/15 px-3 py-0.5 text-xs text-[#16f2b3]">{t.featured}</span>
+                        )}
+                        <h3 className="text-xl lg:text-2xl font-semibold text-white">{p.name}</h3>
+                        <p className="mt-1 text-gray-200">{p.subtitle}</p>
+                        <p className="mt-1 text-sm text-[#bd30c7]">{p.event}</p>
+                        <ul className="mt-4 list-disc pl-5 space-y-2 text-gray-200 text-sm lg:text-base">
+                            {p.bullets.map((b, i) => <li key={i}>{b}</li>)}
+                        </ul>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                            {p.tech.map((s) => (
+                                <span key={s} className="rounded-md border border-[#353a52] px-2 py-0.5 text-xs text-gray-300">{s}</span>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                        <div className="mt-5 flex flex-wrap gap-3">
+                            {p.links.map((l) => (
+                                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer"
+                                    className={`rounded-md px-4 py-2 text-sm text-white transition-colors duration-300 ${l.primary ? "bg-[#623686] hover:bg-[#6d20c5d7]" : "border border-[#464c6a] hover:border-[#16f2b3]"}`}>
+                                    {l.label[lang]} ↗
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
-    )
+    );
 }
-
-export default Projects
+export default Projects;

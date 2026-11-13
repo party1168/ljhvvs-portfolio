@@ -37,3 +37,7 @@ next-env.d.ts
 
 #github Page
 !out/
+
+# 素材包含第 7–9 節的私人資訊，不能進公開 repo
+private/
+.env

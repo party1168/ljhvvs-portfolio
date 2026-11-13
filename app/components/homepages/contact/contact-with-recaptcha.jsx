@@ -6,8 +6,10 @@ import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { TbMailForward } from "react-icons/tb";
 import { toast } from 'react-toastify';
+import { useContent } from '../../lang-provider';
 
 function ContactWithCaptcha() {
+  const t = useContent().contact;
   const [input, setInput] = useState({
     name: '',
     email: '',
@@ -28,7 +30,7 @@ function ContactWithCaptcha() {
   const handleSendMail = async (e) => {
     e.preventDefault();
     if (!captcha) {
-      toast.error('Please complete the captcha!');
+      toast.error(t.captcha);
       return;
     };
 
@@ -49,7 +51,7 @@ function ContactWithCaptcha() {
       const res = await emailjs.send(serviceID, templateID, input, options);
 
       if (res.status === 200) {
-        toast.success('Email傳送成功');
+        toast.success(t.sent);
         setInput({
           name: '',
           email: '',
@@ -65,15 +67,15 @@ function ContactWithCaptcha() {
   return (
     <div className="">
       <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
-        Contact with me
+        {t.heading}
       </p>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <p className="text-sm text-[#d3d8e8]">
-          {"若對於我有任何建議以及問題，歡迎聯繫我。我正在尋找工作中，若有任何工作機會也歡迎聯繫我！"}
+          {t.intro}
         </p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base">Name: </label>
+            <label className="text-base">{t.name}</label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
@@ -86,7 +88,7 @@ function ContactWithCaptcha() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Email: </label>
+            <label className="text-base">{t.email}</label>
             <input
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
@@ -100,12 +102,12 @@ function ContactWithCaptcha() {
               }}
             />
             {error.email &&
-              <p className="text-sm text-red-400">請輸入一個正確的Email</p>
+              <p className="text-sm text-red-400">{t.invalidEmail}</p>
             }
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">Message: </label>
+            <label className="text-base">{t.message}</label>
             <textarea
               className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"
@@ -124,7 +126,7 @@ function ContactWithCaptcha() {
           <div className="flex flex-col items-center gap-2">
             {error.required &&
               <p className="text-sm text-red-400">
-                Email & Message 為必須
+                {t.required}
               </p>
             }
             <button
@@ -132,7 +134,7 @@ function ContactWithCaptcha() {
               role="button"
               onClick={handleSendMail}
             >
-              <span>Send Message</span>
+              <span>{t.send}</span>
               <TbMailForward className="mt-1" size={18} />
             </button>
           </div>
