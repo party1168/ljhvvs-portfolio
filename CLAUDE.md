@@ -17,3 +17,4 @@
 - 所有文字內容（中英文）都在 `utils/data/content.js`，同一個檔案裡兩種語言結構相同；語言切換在 `app/components/lang-provider.jsx`，預設英文。
 - 聯絡表單用 EmailJS + reCAPTCHA，金鑰從 `.env` 讀（`.env` 不進 git）。
 - 部署：`npm run deploy`（build → commit `out/` → subtree push 到 `gh-pages`）。
+- `out/.nojekyll` 一定要在：`next build` 會清掉它，少了它 GitHub Pages 會忽略 `_next/`，整站 CSS/JS 404。用 `npm run deploy` 會自動補；手動部署要自己補。
