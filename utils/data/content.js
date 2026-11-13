@@ -14,6 +14,14 @@ const cryptowillLinks = [
     { label: { en: "Frontend", zh: "前端" }, href: "https://github.com/party1168/cryptowill-web" },
 ];
 
+const cryptofuLinks = [
+    { label: { en: "GitHub", zh: "GitHub" }, href: "https://github.com/party1168/Cryptofu" },
+];
+
+const foodCrawlerLinks = [
+    { label: { en: "GitHub", zh: "GitHub" }, href: "https://github.com/party1168/Food-Crawler" },
+];
+
 const ticktoLinks = [
     { label: { en: "Live demo", zh: "Demo" }, href: "https://ticketo-alpha.vercel.app" },
     { label: { en: "Code (teammate's repo)", zh: "程式碼（隊友的 repo）" }, href: "https://github.com/ericwang520/ticketing-platform" },
@@ -27,7 +35,7 @@ export const content = {
             greeting: ["Hi!", "Welcome to my personal website.", "I'm"],
             name: "Jeremy Lu",
             designationPrefix: "I'm a",
-            designation: "backend-leaning full-stack engineer",
+            designation: "software engineer",
             end: ".",
             location: "Taipei, Taiwan",
             status: "Open to backend / full-stack roles in Taipei or remote",
@@ -37,7 +45,7 @@ export const content = {
         about: {
             title: "About",
             paragraphs: [
-                "Backend-leaning full-stack engineer with a degree in Information Management. At Medical Innovation Technology, I built healthcare systems with .NET, Angular, and PostgreSQL, including cutting a page the team had struggled with for a long time from 3.8 s to 48 ms.",
+                "Software engineer with a degree in Information Management. At Medical Innovation Technology, I built healthcare systems with .NET, Angular, and PostgreSQL, including cutting a page the team had struggled with for a long time from 3.8 s to 48 ms.",
                 "Outside work, I'm into Web3: two ETHGlobal hackathons, building both backend APIs and Solidity smart contracts. I validate ideas with small experiments first and write down the reasoning behind each technical decision.",
             ],
         },
@@ -98,6 +106,27 @@ export const content = {
                     tech: ["Next.js", "TypeScript", "World ID", "MiniKit"],
                     links: ticktoLinks,
                 },
+                {
+                    name: "Cryptofu",
+                    subtitle: "Crypto portfolio tracker",
+                    event: "Personal project · in progress (paused)",
+                    bullets: [
+                        "Goal: connect exchange accounts (Binance, OKX, MAX) or a Web3 wallet, add up total holdings, and show them in charts.",
+                        "Not finished yet. I put a lot of work into it and plan to pick it back up.",
+                    ],
+                    tech: ["Next.js", "TypeScript", "MongoDB", "Redis", "JWT", "Tailwind CSS"],
+                    links: cryptofuLinks,
+                },
+                {
+                    name: "Food-Crawler",
+                    subtitle: "Recipe web crawler",
+                    event: "Personal project · 2024",
+                    bullets: [
+                        "Crawls English recipes and collects the ingredient data for a healthy-diet recommendation bot.",
+                    ],
+                    tech: ["Python"],
+                    links: foodCrawlerLinks,
+                },
             ],
         },
         skills: {
@@ -154,7 +183,7 @@ export const content = {
             greeting: ["你好！", "歡迎來到我的個人網站，", "我是"],
             name: "呂駿宏",
             designationPrefix: "我是一個",
-            designation: "偏後端的全端工程師",
+            designation: "軟體工程師",
             end: "。",
             location: "台北",
             status: "Open to backend / full-stack roles in Taipei or remote",
@@ -164,7 +193,7 @@ export const content = {
         about: {
             title: "關於我",
             paragraphs: [
-                "我畢業於資訊管理學系，是偏後端的全端工程師。在醫創工作期間，我主要用 .NET、Angular 和 PostgreSQL 開發醫療系統，其中一項成果是把團隊困擾已久的頁面，從 3.8 秒優化到 48 毫秒。",
+                "我畢業於資訊管理學系，是一名軟體工程師。在醫創工作期間，我主要用 .NET、Angular 和 PostgreSQL 開發醫療系統，其中一項成果是把團隊困擾已久的頁面，從 3.8 秒優化到 48 毫秒。",
                 "工作之外，我對 Web3 和區塊鏈很有興趣，參加過兩屆 ETHGlobal，做過後端 API，也寫過 Solidity 智能合約。做專案時，我習慣先寫小實驗確認可行，再把每個技術決策的理由記錄下來。",
             ],
         },
@@ -224,6 +253,27 @@ export const content = {
                     ],
                     tech: ["Next.js", "TypeScript", "World ID", "MiniKit"],
                     links: ticktoLinks,
+                },
+                {
+                    name: "Cryptofu",
+                    subtitle: "加密貨幣資產追蹤網站",
+                    event: "個人專案 · 開發中（暫停）",
+                    bullets: [
+                        "目標：連接交易所帳戶（Binance、OKX、MAX）或 Web3 錢包，加總所有持倉，並用圖表呈現。",
+                        "目前還沒完成。我在這個專案花了很多心思，之後會繼續做。",
+                    ],
+                    tech: ["Next.js", "TypeScript", "MongoDB", "Redis", "JWT", "Tailwind CSS"],
+                    links: cryptofuLinks,
+                },
+                {
+                    name: "Food-Crawler",
+                    subtitle: "食譜爬蟲",
+                    event: "個人專案 · 2024",
+                    bullets: [
+                        "爬取英文食譜，收集食材資料給健康飲食推薦 bot 使用。",
+                    ],
+                    tech: ["Python"],
+                    links: foodCrawlerLinks,
                 },
             ],
         },

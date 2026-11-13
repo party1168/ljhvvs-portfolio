@@ -9,8 +9,8 @@ import "./css/globals.scss";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jeremy (Chun-Hung) Lu 呂駿宏 | Backend-leaning full-stack engineer",
-  description: "Backend-leaning full-stack engineer in Taipei. Built healthcare systems with .NET, Angular and PostgreSQL, and on-chain apps at two ETHGlobal hackathons.",
+  title: "Jeremy (Chun-Hung) Lu 呂駿宏 | Software Engineer",
+  description: "Software engineer in Taipei. Built healthcare systems with .NET, Angular and PostgreSQL, and on-chain apps at two ETHGlobal hackathons.",
 };
 
 export default function RootLayout({ children }) {
